@@ -1,0 +1,184 @@
+@import './card-component.css';
+
+@import url('./card-component.css');
+
+.go-index {
+  margin-bottom: var(--base-spacing);
+}
+
+.component-title {
+  margin: var(--base-spacing) 0;
+}
+
+.product-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card.wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f5f5f7;
+  min-height: var(--size);
+  padding: var(--large-spacing);
+}
+
+.product-card.dark {
+  background: #1d1d1f;
+  color: #f5f5f7;
+}
+
+.product-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 360px;
+}
+
+.product-card-title {
+  font-size: var(--large-text);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--small-spacing);
+}
+
+.product-card-desc {
+  font-size: var(--base-text);
+  line-height: var(--line-normal);
+  opacity: 0.9;
+  margin-bottom: var(--base-spacing);
+}
+
+.product-card-meta {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: var(--small-text);
+  opacity: 0.8;
+}
+
+.product-card-actions {
+  display: flex;
+  gap: var(--base-spacing);
+  align-items: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: var(--xx-small-text);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  user-select: none;
+}
+
+.button.primary {
+  background: var(--blue-100);
+  color: white;
+}
+
+.button.ghost {
+  background: transparent;
+  border-color: var(--blue-100);
+  color: var(--blue-100);
+}
+
+.product-card.dark .button.ghost {
+  border-color: var(--blue-100);
+  color: var(--blue-100);
+}
+
+.product-card-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.product-card.wide .product-card-media {
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .media-ipad-pro {
+    background-image: image-set(url('../products/ipad_pro.jpeg') 1x, url('../products/ipad_pro_2x.jpeg') 2x);
+  }
+
+  .media-ipad-air {
+    background-image: image-set(url('../products/ipad_air.jpeg') 1x, url('../products/ipad_air_2x.jpeg') 2x);
+  }
+
+  .media-iphone15-pro {
+    background-image: image-set(url('../products/iphone15_pro.jpeg') 1x, url('../products/iphone15_pro_2x.jpeg') 2x);
+  }
+
+  .media-iphone15 {
+    background-image: image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
+  }
+
+  .media-watch {
+    background-image: image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch_2x.jpeg') 2x);
+  }
+
+  .media-macbook-air {
+    background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
+  }
+
+  .media-airpods-pro {
+    background-image: image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
+  }
+}
+
+@media (min-width: 1025px) {
+  .media-ipad-pro {
+    background-image: image-set(url('../products/ipad_pro_wide.jpeg') 1x, url('../products/ipad_pro_wide_2x.jpeg') 2x);
+  }
+
+  .media-ipad-air {
+    background-image: image-set(url('../products/ipad_air_wide.jpeg') 1x, url('../products/ipad_air_wide_2x.jpeg') 2x);
+  }
+
+  .media-iphone15-pro {
+    background-image: image-set(url('../products/iphone15_pro_wide.jpeg') 1x, url('../products/iphone15_pro_wide_2x.jpeg') 2x);
+  }
+
+  .media-iphone15 {
+    background-image: image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
+  }
+
+  .media-watch {
+    background-image: image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch_2x.jpeg') 2x);
+  }
+
+  .media-macbook-air {
+    background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
+  }
+
+  .media-airpods-pro {
+    background-image: image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
+  }
+}
